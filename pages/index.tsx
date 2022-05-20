@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       if (index === 0) {
         introductionSectionRef.current?.scrollIntoView();
       } else if (index === 1) {
-        introductionSectionRef.current?.scrollIntoView();
+        skillTreeSectionRef.current?.scrollIntoView();
       }
       setNextSection((prev) => (prev === sections.length - 1 ? 0 : prev + 1));
     }
@@ -35,7 +35,15 @@ const Home: NextPage = () => {
       </Head>
       <div className="relative w-screen h-screen">
         <Image src="/home.jpeg" layout="fill" />
-        <div className="w-full h-full z-10 absolute flex flex-col justify-center items-center text-9xl mobile:text-7xl font-bold">
+        <div className="z-10 absolute right-10 top-1/2 rotate-6">
+          <Image
+            src="/hushimiinari.jpeg"
+            width={264}
+            height={264}
+            className="rounded-3xl"
+          />
+        </div>
+        <div className="w-full h-full z-20 absolute flex flex-col justify-center items-center text-9xl mobile:text-7xl font-bold">
           <div className="w-2/3">
             <TextAnimation text="HELLO" />
           </div>

@@ -11,7 +11,7 @@ function Introduction({ sectionRef }: Props) {
       <p className="text-3xl p-4 border-b-2 font-bold">INTRODUCTION</p>
       <div className="p-4 font-semibold flex">
         <div
-          className="w-1/2 overflow-scroll flex flex-col items-center"
+          className="w-1/2 overflow-scroll flex flex-col items-center hidden-scrollbar"
           style={{ height: "calc(100vh - 6rem)" }}
         >
           <div>
