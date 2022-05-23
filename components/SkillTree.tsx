@@ -4,29 +4,8 @@ import React, {
   MouseEvent,
   Ref,
   SetStateAction,
-  useEffect,
-  useRef,
   useState,
 } from "react";
-import { FaNodeJs } from "react-icons/fa";
-import {
-  SiCss3,
-  SiGit,
-  SiHeroku,
-  SiHtml5,
-  SiJavascript,
-  SiLaravel,
-  SiMongodb,
-  SiNextdotjs,
-  SiReact,
-  SiRedux,
-  SiStyledcomponents,
-  SiSwagger,
-  SiSwift,
-  SiTailwindcss,
-  SiTypescript,
-  SiVercel,
-} from "react-icons/si";
 import Section from "./Section";
 
 interface Props {

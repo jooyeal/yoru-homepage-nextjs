@@ -3,6 +3,7 @@ import Dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
 import { useRef } from "react";
+import Career from "../components/Career";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Introduction from "../components/Introduction";
@@ -14,10 +15,11 @@ const ScrollContainer = Dynamic(import("../components/ScrollContainer"), {
 });
 
 const Home: NextPage = () => {
-  const sections = ["INTRODUCTION", "SKILL TREE", "CONTACT"];
+  const sections = ["INTRODUCTION", "SKILL TREE", "CONTACT", "CAREER&HISTORY"];
   const introductionSectionRef = useRef<HTMLDivElement>(null);
   const skillTreeSectionRef = useRef<HTMLDivElement>(null);
   const contactSectionRef = useRef<HTMLDivElement>(null);
+  const careerSectionRef = useRef<HTMLDivElement>(null);
 
   return (
     <div>
@@ -60,11 +62,19 @@ const Home: NextPage = () => {
         <SkillTree sectionRef={skillTreeSectionRef} />
       </ScrollContainer>
       <ScrollContainer>
+        <Career sectionRef={careerSectionRef} />
+      </ScrollContainer>
+      <ScrollContainer>
         <Contact sectionRef={contactSectionRef} />
       </ScrollContainer>
       <Navigation
         sections={sections}
-        refs={[introductionSectionRef, skillTreeSectionRef, contactSectionRef]}
+        refs={[
+          introductionSectionRef,
+          skillTreeSectionRef,
+          contactSectionRef,
+          careerSectionRef,
+        ]}
       />
       <Footer />
     </div>
