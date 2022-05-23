@@ -1,11 +1,12 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { useSpring, animated } from "react-spring";
 
 interface Props {
-  text: string;
+  children: ReactNode;
+  duration: number;
 }
 
-function TextAnimation({ text }: Props) {
+function TextAnimation({ children, duration }: Props) {
   const animation = useSpring({
     loop: false,
     to: async (next, cancel) => {
@@ -13,10 +14,10 @@ function TextAnimation({ text }: Props) {
     },
     from: { opacity: 0 },
     config: {
-      duration: 3000,
+      duration,
     },
   });
-  return <animated.div style={animation}>{text}</animated.div>;
+  return <animated.div style={animation}>{children}</animated.div>;
 }
 
 export default TextAnimation;

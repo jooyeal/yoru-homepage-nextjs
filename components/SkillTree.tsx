@@ -18,6 +18,7 @@ import {
   SiTypescript,
   SiVercel,
 } from "react-icons/si";
+import Section from "./Section";
 
 interface Props {
   sectionRef: Ref<HTMLDivElement>;
@@ -25,8 +26,7 @@ interface Props {
 
 function SkillTree({ sectionRef }: Props) {
   return (
-    <div ref={sectionRef} className="w-screen h-screen p-4">
-      <p className="text-3xl p-4 border-b-2 font-bold">SKILL TREE</p>
+    <Section sectionRef={sectionRef} sectionName="SKILL TREE">
       <div className="p-4 font-semibold text-6xl flex justify-center flex-wrap gap-6">
         <SiReact style={{ color: "#61DBFB" }} />
         <SiNextdotjs />
@@ -46,7 +46,7 @@ function SkillTree({ sectionRef }: Props) {
         <SiSwagger style={{ color: "#1cb7b6" }} />
         <SiMongodb style={{ color: "#3FA037" }} />
       </div>
-    </div>
+    </Section>
   );
 }
 

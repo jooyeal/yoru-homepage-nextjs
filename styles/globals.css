@@ -18,6 +18,10 @@ body {
   font-family: Roboto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-app-region: no-drag;
+  cursor: default;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {

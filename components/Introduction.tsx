@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { Ref } from "react";
+import Section from "./Section";
 
 interface Props {
   sectionRef: Ref<HTMLDivElement>;
@@ -7,12 +8,11 @@ interface Props {
 
 function Introduction({ sectionRef }: Props) {
   return (
-    <div ref={sectionRef} className="w-screen h-screen p-4">
-      <p className="text-3xl p-4 border-b-2 font-bold">INTRODUCTION</p>
-      <div className="p-4 font-semibold flex">
+    <Section sectionRef={sectionRef} sectionName="INTRODUCTION">
+      <div className="p-4 font-semibold flex items-center">
         <div
           className="w-1/2 overflow-scroll flex flex-col items-center hidden-scrollbar"
-          style={{ height: "calc(100vh - 6rem)" }}
+          style={{ height: "calc(100vh - 10rem)" }}
         >
           <div>
             <Image
@@ -73,7 +73,7 @@ function Introduction({ sectionRef }: Props) {
         </div>
         <div className="p-4">hello</div>
       </div>
-    </div>
+    </Section>
   );
 }
 
