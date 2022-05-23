@@ -1,4 +1,13 @@
-import React, { Ref } from "react";
+import { useTheme } from "next-themes";
+import React, {
+  Dispatch,
+  MouseEvent,
+  Ref,
+  SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { FaNodeJs } from "react-icons/fa";
 import {
   SiCss3,
@@ -24,27 +33,109 @@ interface Props {
   sectionRef: Ref<HTMLDivElement>;
 }
 
+const Skill = ({
+  text,
+  click,
+  setClick,
+}: {
+  text: string;
+  click: string;
+  setClick: Dispatch<SetStateAction<string>>;
+}) => {
+  return (
+    <div className="text-4xl mobile:text-2xl">
+      <span
+        className=""
+        onClick={() => {
+          if (click == "") {
+            setClick(text);
+            console.log(text);
+          }
+        }}
+      >
+        {text}
+      </span>
+    </div>
+  );
+};
 function SkillTree({ sectionRef }: Props) {
+  const skills = [
+    "REACT",
+    "NEXTJS",
+    "JAVASCRIPT",
+    "TYPESCRIPT",
+    "REDUX",
+    "HTML5",
+    "CSS3",
+    "STYLEDCOMPONENTS",
+    "TAILWIND",
+    "SWIFT",
+    "NODEJS",
+    "LARAVEL",
+    "VERCEL",
+    "HEROKU",
+    "GIT",
+    "SWAGGER",
+    "MONGODB",
+    "MYSQL",
+  ];
+  const [position, setPosition] = useState<any>(null);
+  const [hidden, setHidden] = useState<boolean>(false);
+  const [click, setClick] = useState<string>("");
+
+  const { theme } = useTheme();
+  const mouseMove = (e: MouseEvent) => {
+    setHidden(false);
+    setPosition({ x: e.clientX, y: e.clientY });
+  };
+  const mouseOut = () => {
+    setHidden(true);
+  };
+
   return (
     <Section sectionRef={sectionRef} sectionName="SKILL TREE">
-      <div className="p-4 font-semibold text-6xl flex justify-center flex-wrap gap-6">
-        <SiReact style={{ color: "#61DBFB" }} />
-        <SiNextdotjs />
-        <SiJavascript style={{ color: "#f0db4f " }} />
-        <SiTypescript style={{ color: "#007acc" }} />
-        <SiRedux style={{ color: "#764abc" }} />
-        <SiHtml5 style={{ color: "#e34c26" }} />
-        <SiCss3 style={{ color: "#264de4" }} />
-        <SiStyledcomponents />
-        <SiTailwindcss style={{ color: "#04ACCC" }} />
-        <SiSwift style={{ color: "#F05138" }} />
-        <FaNodeJs style={{ color: "#3c873a" }} />
-        <SiLaravel style={{ color: "#F05340" }} />
-        <SiVercel />
-        <SiHeroku style={{ color: "#6762A6" }} />
-        <SiGit style={{ color: "#F1502F" }} />
-        <SiSwagger style={{ color: "#1cb7b6" }} />
-        <SiMongodb style={{ color: "#3FA037" }} />
+      <div onMouseMove={mouseMove} onMouseOut={mouseOut}>
+        {!hidden && theme === "dark" && (
+          <div
+            className={`fixed w-10 h-10 rounded-full mix-blend-difference bg-white`}
+            style={{
+              left: `${position?.x - 20}px`,
+              top: `${position?.y - 20}px`,
+              transform: `translate(-50%, -50%)`,
+            }}
+          ></div>
+        )}
+        <div className={`p-4 font-semibold`}>
+          {click !== "" && (
+            <div className={`flex justify-between items-center text-3xl mb-2`}>
+              {click}
+              <div className="border-2 p-2 rounded-md text-xl">
+                <button onClick={() => setClick("")}>BACK</button>
+              </div>
+            </div>
+          )}
+          <div
+            className={`${
+              click !== "" ? "h-96" : "h-0 border-0"
+            } overflow-auto transition-all duration-1000 border-2 rounded-md hidden-scrollbar`}
+          >
+            description
+          </div>
+          <div
+            className={`flex justify-center flex-wrap gap-6 transition-all duration-500 overflow-auto hidden-scrollbar ${
+              click !== "" ? "h-0 " : "h-128"
+            }`}
+          >
+            {skills.map((skill, index) => (
+              <Skill
+                key={index}
+                text={skill}
+                click={click}
+                setClick={setClick}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </Section>
   );

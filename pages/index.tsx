@@ -2,12 +2,11 @@ import type { NextPage } from "next";
 import Dynamic from "next/dynamic";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Introduction from "../components/Introduction";
 import Navigation from "../components/Navigation";
-import SideMenu from "../components/SideMenu";
 import SkillTree from "../components/SkillTree";
 import TextAnimation from "../components/TextAnimation";
 const ScrollContainer = Dynamic(import("../components/ScrollContainer"), {
@@ -29,11 +28,19 @@ const Home: NextPage = () => {
       </Head>
       <div className="relative w-screen h-screen">
         <Image src="/home.jpeg" layout="fill" />
-        <div className="z-10 absolute right-10 top-1/2 rotate-6">
+        <div className="z-10 absolute left-10 top-4 -rotate-12">
           <Image
-            src="/hushimiinari.jpeg"
-            width={264}
-            height={264}
+            src="/main_me2.jpeg"
+            width={240}
+            height={180}
+            className="rounded-3xl"
+          />
+        </div>
+        <div className="z-10 absolute right-10 bottom-6 rotate-6">
+          <Image
+            src="/main_me.jpeg"
+            width={240}
+            height={180}
             className="rounded-3xl"
           />
         </div>

@@ -26,7 +26,7 @@ type Props = {};
 
 function Footer({}: Props) {
   return (
-    <div className="fixed bottom-0 w-full">
+    <div className="fixed bottom-0 w-full z-50">
       <Marquee
         className="h-16"
         speed={50}

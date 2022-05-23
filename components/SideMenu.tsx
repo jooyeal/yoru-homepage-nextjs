@@ -4,6 +4,7 @@ import {
   BsChevronDoubleDown,
   BsChevronDoubleUp,
   BsMoonFill,
+  BsSunFill,
 } from "react-icons/bs";
 interface Props {}
 
@@ -17,7 +18,7 @@ function SideMenu({}: Props) {
     <div className="flex flex-col items-center w-16 h-auto shadow-md p-4 fixed right-4 top-36 z-50 bg-zinc-500 bg-opacity-50 rounded-lg">
       <div className="flex flex-col items-center justify-end text-xl text-white gap-4">
         <div className="p-2 cursor-pointer" onClick={onClick}>
-          <BsMoonFill />
+          {theme === "light" ? <BsMoonFill /> : <BsSunFill />}
         </div>
       </div>
     </div>
