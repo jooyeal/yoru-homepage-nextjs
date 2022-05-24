@@ -8,14 +8,9 @@ function GitHub({}: Props) {
 }
 
 export async function getStaticProps() {
-  try {
-    const response = await axios.get(`http://localhost:3000/api/github/user`);
-    const languageList = response.data.user.map((repo: any) => repo.language);
-    const languages = languageList.reduce((language: string | null) => {});
-    return {
-      props: { languageList },
-    };
-  } catch (err) {}
+  return {
+    props: {},
+  };
 }
 
 export default GitHub;
