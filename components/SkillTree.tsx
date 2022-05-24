@@ -57,7 +57,7 @@ function SkillTree({ sectionRef }: Props) {
           <div
             className={`pl-3 pr-3 break-all font-introduction ${
               click !== null && click !== undefined ? "h-96" : "h-0 border-0"
-            } overflow-auto transition-all duration-1000 border-2 rounded-md hidden-scrollbar`}
+            } overflow-auto transition-all duration-1000 border-2 rounded-md hidden-scrollbar break-all`}
           >
             {click !== null && click !== undefined && skillData[click].desc}
           </div>

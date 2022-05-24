@@ -2,17 +2,17 @@ export const skills = [
   {
     id: 1,
     title: "REACT",
-    desc: "React.js is my most favorite javascript library.",
+    desc: "React.js is most popular javascript library, there are many references and that's my most favorite language too. i am almost using React, except when i work with other language. my personal project is implemented with React almost 99%. i will keep using this language, and want to be a specialist of React.",
   },
   {
     id: 2,
     title: "NEXTJS",
-    desc: "hello",
+    desc: "I think Next.js is powerful framework for React maybe. Next.js is contrasted with React that can server side rendering. React only can client side rendering so, it causes some problems like SEO and user experience. even i started to studying Next.js recently, but Next.js is quite easy to learn for React developer and can implement things so easy. Next.js has a big community and it's still growing up now. i am absolutely satisfying to use Next.js. actually this website is implemented with Next.js too",
   },
   {
     id: 3,
     title: "JAVASCRIPT",
-    desc: "hello",
+    desc: "For using React.js or Next.js, knowledge of javascript is indispensable. since i started React, i ",
   },
   {
     id: 4,

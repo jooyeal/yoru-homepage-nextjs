@@ -42,7 +42,7 @@ const Card = ({
         </div>
         <div
           style={{ height: `${open ? "calc(100% - 4rem)" : "0px"} ` }}
-          className="overflow-auto hidden-scrollbar transition-all duration-700 rounded-lg text-black"
+          className="overflow-auto hidden-scrollbar transition-all duration-700 rounded-lg text-black p-2 break-all"
         >
           <div className="font-bold text-lg rounded-lg">{title}</div>
           {explanation}
