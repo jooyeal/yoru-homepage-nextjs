@@ -60,31 +60,41 @@ function Astro({ astroInfo }: Props) {
     setInfo([...info, ...response.data.info]);
   };
   return (
-    <InfiniteScroll
-      pageStart={0}
-      hasMore={true}
-      loadMore={load}
-      loader={
-        <div
-          className="w-full flex justify-center items-center animate-spin text-2xl"
-          key="loader"
-        >
-          <BiLoaderAlt />
+    <>
+      <video
+        loop
+        autoPlay
+        muted
+        className="fixed w-screen h-screen object-fill"
+      >
+        <source src="/astro_background.mp4" type="video/mp4" />
+      </video>
+      <div className="fixed text-5xl font-bold pl-4 z-20 mobile:text-2xl">{`NASA'S INFORMATION`}</div>
+      <InfiniteScroll
+        pageStart={0}
+        hasMore={true}
+        loadMore={load}
+        loader={
+          <div
+            className="w-full flex justify-center items-center animate-spin text-2xl"
+            key="loader"
+          >
+            <BiLoaderAlt />
+          </div>
+        }
+      >
+        <div className="p-6 pt-14 flex flex-wrap justify-center items-center gap-6">
+          {info.map((info, index) => (
+            <Card
+              key={index}
+              url={info.url}
+              explanation={info.explanation}
+              title={info.title}
+            />
+          ))}
         </div>
-      }
-    >
-      <div className="p-6 flex flex-col items-center gap-6">
-        <div className="text-5xl mobile:text-2xl">{`NASA'S INFORMATION`}</div>
-        {info.map((info, index) => (
-          <Card
-            key={index}
-            url={info.url}
-            explanation={info.explanation}
-            title={info.title}
-          />
-        ))}
-      </div>
-    </InfiniteScroll>
+      </InfiniteScroll>
+    </>
   );
 }
 

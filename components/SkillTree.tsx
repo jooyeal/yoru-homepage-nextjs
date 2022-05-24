@@ -67,8 +67,10 @@ function SkillTree({ sectionRef }: Props) {
             }`}
           >
             {skillData.map((skill, index) => (
-              <div key={index} onClick={() => setClick(index)}>
-                <Skill text={skill.title} />
+              <div key={index}>
+                <span onClick={() => setClick(index)}>
+                  <Skill text={skill.title} />
+                </span>
               </div>
             ))}
           </div>

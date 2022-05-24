@@ -33,7 +33,7 @@ function Footer({}: Props) {
         gradientColor={[255, 255, 255]}
         gradientWidth={0}
       >
-        <div className="flex gap-6 text-4xl">
+        <div className="flex gap-6 text-4xl mr-4">
           <SiReact style={{ color: "#61DBFB" }} />
           <SiNextdotjs />
           <SiJavascript style={{ color: "#f0db4f " }} />
