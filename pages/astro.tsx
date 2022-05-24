@@ -65,6 +65,7 @@ function Astro({ astroInfo }: Props) {
         loop
         autoPlay
         muted
+        playsInline
         className="fixed w-screen h-screen object-fill"
       >
         <source src="/astro_background.mp4" type="video/mp4" />
