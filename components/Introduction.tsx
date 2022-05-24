@@ -96,7 +96,7 @@ function Introduction({ sectionRef }: Props) {
           </div>
         </div>
         <div
-          className="w-1/2 p-4 font-introduction overflow-auto hidden-scroll break-all mobile:text-xs"
+          className="w-1/2 p-4 font-introduction overflow-auto hidden-scrollbar break-all mobile:text-xs"
           style={{ height: "calc(100vh - 10rem)" }}
         >
           {`Hello i'm Juyeol Cha. i'm working as web deveolpor in japan. though i
