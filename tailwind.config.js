@@ -13,6 +13,9 @@ module.exports = {
     screens: {
       mobile: { max: "500px" },
     },
+    fontFamily: {
+      introduction: ['"Source Code Pro"'],
+    },
   },
   plugins: [],
 };

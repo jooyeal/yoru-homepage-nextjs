@@ -24,7 +24,7 @@ const Skill = ({
   return (
     <div className="text-4xl mobile:text-2xl">
       <span
-        className=""
+        className="cursor-pointer"
         onClick={() => {
           if (click == "") {
             setClick(text);
