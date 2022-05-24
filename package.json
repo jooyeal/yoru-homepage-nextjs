@@ -10,15 +10,18 @@
   },
   "dependencies": {
     "@types/nprogress": "^0.2.0",
+    "@types/react-infinite-scroller": "^1.2.3",
     "@types/scrollreveal": "^0.0.8",
     "axios": "^0.27.2",
     "emailjs-com": "^3.2.0",
     "next": "12.1.6",
     "next-themes": "^0.2.0",
+    "nextjs-progressbar": "^0.0.14",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-fast-marquee": "^1.3.2",
     "react-icons": "^4.3.1",
+    "react-infinite-scroller": "^1.2.6",
     "react-spring": "^9.4.5",
     "scrollreveal": "^4.0.9"
   },
