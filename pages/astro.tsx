@@ -54,7 +54,9 @@ const Card = ({
 function Astro({ astroInfo }: Props) {
   const [info, setInfo] = useState(astroInfo);
   const load = async () => {
-    const response = await axios.get("http://localhost:3000/api/nasa");
+    const response = await axios.get(
+      "https://yoru-homepage-nextjs.vercel.app/api/nasa"
+    );
     setInfo([...info, ...response.data.info]);
   };
   return (
@@ -87,7 +89,9 @@ function Astro({ astroInfo }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const astroInfo = await axios.get("http://localhost:3000/api/nasa");
+  const astroInfo = await axios.get(
+    "https://yoru-homepage-nextjs.vercel.app/api/nasa"
+  );
 
   return {
     props: { astroInfo: astroInfo.data.info },
