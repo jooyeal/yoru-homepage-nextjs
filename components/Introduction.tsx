@@ -17,7 +17,7 @@ function Introduction({ sectionRef }: Props) {
           <div>
             <Image
               className="rounded-lg"
-              src="/home.jpeg"
+              src="/1.jpeg"
               width={368}
               height={368}
             />
@@ -25,7 +25,7 @@ function Introduction({ sectionRef }: Props) {
           <div>
             <Image
               className="rounded-lg"
-              src="/home.jpeg"
+              src="/2.jpeg"
               width={368}
               height={368}
             />
@@ -33,7 +33,7 @@ function Introduction({ sectionRef }: Props) {
           <div>
             <Image
               className="rounded-lg"
-              src="/home.jpeg"
+              src="/3.jpeg"
               width={368}
               height={368}
             />
@@ -41,7 +41,7 @@ function Introduction({ sectionRef }: Props) {
           <div>
             <Image
               className="rounded-lg"
-              src="/home.jpeg"
+              src="/4.jpeg"
               width={368}
               height={368}
             />
@@ -49,7 +49,7 @@ function Introduction({ sectionRef }: Props) {
           <div>
             <Image
               className="rounded-lg"
-              src="/home.jpeg"
+              src="/5.jpeg"
               width={368}
               height={368}
             />
@@ -57,7 +57,7 @@ function Introduction({ sectionRef }: Props) {
           <div>
             <Image
               className="rounded-lg"
-              src="/home.jpeg"
+              src="/6.jpeg"
               width={368}
               height={368}
             />
@@ -65,7 +65,31 @@ function Introduction({ sectionRef }: Props) {
           <div>
             <Image
               className="rounded-lg"
-              src="/home.jpeg"
+              src="/7.jpeg"
+              width={368}
+              height={368}
+            />
+          </div>
+          <div>
+            <Image
+              className="rounded-lg"
+              src="/8.jpeg"
+              width={368}
+              height={368}
+            />
+          </div>
+          <div>
+            <Image
+              className="rounded-lg"
+              src="/9.jpeg"
+              width={368}
+              height={368}
+            />
+          </div>
+          <div>
+            <Image
+              className="rounded-lg"
+              src="/10.jpeg"
               width={368}
               height={368}
             />

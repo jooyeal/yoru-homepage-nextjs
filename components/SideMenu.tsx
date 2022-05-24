@@ -1,11 +1,7 @@
 import { useTheme } from "next-themes";
-import React, { Dispatch, SetStateAction, useState } from "react";
-import {
-  BsChevronDoubleDown,
-  BsChevronDoubleUp,
-  BsMoonFill,
-  BsSunFill,
-} from "react-icons/bs";
+import Link from "next/link";
+import React from "react";
+import { BsGithub, BsInstagram, BsMoonFill, BsSunFill } from "react-icons/bs";
 interface Props {}
 
 function SideMenu({}: Props) {
@@ -19,6 +15,20 @@ function SideMenu({}: Props) {
       <div className="flex flex-col items-center justify-end text-xl text-white gap-4">
         <div className="p-2 cursor-pointer" onClick={onClick}>
           {theme === "light" ? <BsMoonFill /> : <BsSunFill />}
+        </div>
+        <div className="p-2 cursor-pointer">
+          <Link href="https://www.instagram.com/yoru_cha/">
+            <a>
+              <BsInstagram />
+            </a>
+          </Link>
+        </div>
+        <div className="p-2 cursor-pointer">
+          <Link href="https://github.com/jooyeal">
+            <a>
+              <BsGithub />
+            </a>
+          </Link>
         </div>
       </div>
     </div>
