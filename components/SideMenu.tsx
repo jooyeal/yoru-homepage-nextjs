@@ -1,14 +1,8 @@
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import React from "react";
-import {
-  BsGithub,
-  BsInstagram,
-  BsMoonFill,
-  BsMoonStarsFill,
-  BsSunFill,
-} from "react-icons/bs";
-import { GiAstrolabe } from "react-icons/gi";
+import { BsGithub, BsInstagram, BsSunFill } from "react-icons/bs";
+import { GiAstronautHelmet } from "react-icons/gi";
 import { IoMdHome, IoMdMoon } from "react-icons/io";
 interface Props {}
 
@@ -48,7 +42,7 @@ function SideMenu({}: Props) {
         <div className="p-2 cursor-pointer">
           <Link href="/astro">
             <a>
-              <GiAstrolabe />
+              <GiAstronautHelmet />
             </a>
           </Link>
         </div>
