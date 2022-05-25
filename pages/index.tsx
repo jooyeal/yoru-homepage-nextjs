@@ -8,6 +8,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Introduction from "../components/Introduction";
 import Navigation from "../components/Navigation";
+import Project from "../components/Project";
 import SkillTree from "../components/SkillTree";
 import TextAnimation from "../components/TextAnimation";
 const ScrollContainer = Dynamic(import("../components/ScrollContainer"), {
@@ -15,11 +16,18 @@ const ScrollContainer = Dynamic(import("../components/ScrollContainer"), {
 });
 
 const Home: NextPage = () => {
-  const sections = ["INTRODUCTION", "SKILL TREE", "CONTACT", "CAREER&HISTORY"];
+  const sections = [
+    "INTRODUCTION",
+    "SKILL TREE",
+    "CONTACT",
+    "CAREER&HISTORY",
+    "PROJECTS",
+  ];
   const introductionSectionRef = useRef<HTMLDivElement>(null);
   const skillTreeSectionRef = useRef<HTMLDivElement>(null);
   const contactSectionRef = useRef<HTMLDivElement>(null);
   const careerSectionRef = useRef<HTMLDivElement>(null);
+  const projectSectionRef = useRef<HTMLDivElement>(null);
 
   return (
     <div>
@@ -62,6 +70,9 @@ const Home: NextPage = () => {
         <SkillTree sectionRef={skillTreeSectionRef} />
       </ScrollContainer>
       <ScrollContainer>
+        <Project sectionRef={projectSectionRef} />
+      </ScrollContainer>
+      <ScrollContainer>
         <Career sectionRef={careerSectionRef} />
       </ScrollContainer>
       <ScrollContainer>
@@ -74,6 +85,7 @@ const Home: NextPage = () => {
           skillTreeSectionRef,
           contactSectionRef,
           careerSectionRef,
+          projectSectionRef,
         ]}
       />
       <Footer />
