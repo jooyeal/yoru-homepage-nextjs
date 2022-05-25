@@ -34,22 +34,22 @@ const ProjectInfo: React.FC<{
           </div>
           <div className="basis-3/5 h-80 mobile:basis-1/2 p-4 overflow-y-auto break-all mobile:h-40 hidden-scrollbar border-t border-b rounded-sm">
             <div className="text-2xl mobile:text-lg font-bold">OVERVIEW</div>
-            <div className="mobile:text-xs">{overview}</div>
+            <div className="mobile:text-xs break-all">{overview}</div>
             <div className="text-xl mobile:text-base font-bold mt-4">
               DETAIL
             </div>
-            <div className="mobile:text-xs">{detail}</div>
+            <div className="mobile:text-xs break-all">{detail}</div>
           </div>
         </div>
       ) : (
         <div className="flex gap-1">
           <div className="basis-3/5 h-80 mobile:basis-1/2 p-4 overflow-y-auto break-all mobile:h-40 hidden-scrollbar border-t border-b rounded-sm">
             <div className="text-2xl mobile:text-lg font-bold">OVERVIEW</div>
-            <div className="mobile:text-xs">{overview}</div>
+            <div className="mobile:text-xs break-all">{overview}</div>
             <div className="text-xl mobile:text-base font-bold mt-4">
               DETAIL
             </div>
-            <div className="mobile:text-xs">{detail}</div>
+            <div className="mobile:text-xs break-all">{detail}</div>
           </div>
           <div className="basis-2/5 relative h-80 mobile:basis-1/2 mobile:h-40">
             <GiClick className="absolute -bottom-3 -right-3 text-3xl animate-bounce text-green-400 z-30" />
