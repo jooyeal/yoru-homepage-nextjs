@@ -35,14 +35,16 @@ const Card = ({
         } bg-slate-300 bg-opacity-50`}
       >
         <div
-          className="h-10 flex items-center justify-center w-full text-lg rounded-lg"
+          className="h-10 flex items-center justify-center w-full text-lg rounded-lg cursor-pointer"
           onClick={() => setOpen((prev) => !prev)}
         >
           {open ? <IoIosArrowDown /> : <IoIosArrowUp />}
         </div>
         <div
           style={{ height: `${open ? "calc(100% - 4rem)" : "0px"} ` }}
-          className="overflow-auto hidden-scrollbar transition-all duration-700 rounded-lg text-black p-2 break-all"
+          className={`${
+            open ? "" : "hidden"
+          } overflow-auto hidden-scrollbar transition-all duration-700 rounded-lg text-black p-2 break-all`}
         >
           <div className="font-bold text-lg rounded-lg">{title}</div>
           {explanation}
