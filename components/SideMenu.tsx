@@ -19,6 +19,11 @@ function SideMenu({}: Props) {
           {theme === "light" ? <IoMdMoon /> : <BsSunFill />}
         </div>
         <div className="p-2 cursor-pointer">
+          <Link href="https://yoru-blog.vercel.app/">
+            <a className="text-xs font-bold">BLOG</a>
+          </Link>
+        </div>
+        <div className="p-2 cursor-pointer">
           <Link href="/">
             <a>
               <IoMdHome />
