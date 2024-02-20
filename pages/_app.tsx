@@ -6,7 +6,7 @@ import SideMenu from "../components/SideMenu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
+    <ThemeProvider attribute="class" defaultTheme="light">
       <NextNprogress
         color="#ab47bc"
         startPosition={0.3}
