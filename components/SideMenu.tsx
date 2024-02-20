@@ -9,7 +9,7 @@ interface Props {}
 function SideMenu({}: Props) {
   const { theme, setTheme } = useTheme();
   const onClick = () => {
-    return setTheme(theme === "dark" ? "light" : "dark");
+    return setTheme(theme === "light" || theme === "system" ? "light" : "dark");
   };
 
   return (
