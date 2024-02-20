@@ -19,8 +19,10 @@ function SideMenu({}: Props) {
           {theme === "light" ? <IoMdMoon /> : <BsSunFill />}
         </div>
         <div className="p-2 cursor-pointer">
-          <Link href="https://yoru-blog.vercel.app/">
-            <a className="text-xs font-bold">BLOG</a>
+          <Link href="https://yorulog-v2.vercel.app/">
+            <a target="_blank" className="text-xs font-bold">
+              BLOG
+            </a>
           </Link>
         </div>
         <div className="p-2 cursor-pointer">
@@ -32,25 +34,25 @@ function SideMenu({}: Props) {
         </div>
         <div className="p-2 cursor-pointer">
           <Link href="https://www.instagram.com/yoru_cha/">
-            <a>
+            <a target="_blank">
               <BsInstagram />
             </a>
           </Link>
         </div>
         <div className="p-2 cursor-pointer">
           <Link href="https://github.com/jooyeal">
-            <a>
+            <a target="_blank">
               <BsGithub />
             </a>
           </Link>
         </div>
-        <div className="p-2 cursor-pointer">
+        {/* <div className="p-2 cursor-pointer">
           <Link href="/astro">
             <a>
               <GiAstronautHelmet />
             </a>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
