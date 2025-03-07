@@ -2,14 +2,13 @@ import { useTheme } from "next-themes";
 import Link from "next/link";
 import React from "react";
 import { BsGithub, BsInstagram, BsSunFill } from "react-icons/bs";
-import { GiAstronautHelmet } from "react-icons/gi";
 import { IoMdHome, IoMdMoon } from "react-icons/io";
 interface Props {}
 
 function SideMenu({}: Props) {
   const { theme, setTheme } = useTheme();
   const onClick = () => {
-    return setTheme(theme === "light" || theme === "system" ? "light" : "dark");
+    return setTheme(theme === "light" || theme === "system" ? "dark" : "light");
   };
 
   return (
